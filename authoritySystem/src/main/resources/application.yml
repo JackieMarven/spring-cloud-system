@@ -1,0 +1,12 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: user-author-system
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
