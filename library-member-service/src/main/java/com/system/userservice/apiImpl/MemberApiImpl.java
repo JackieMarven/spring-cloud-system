@@ -27,10 +27,13 @@ public class MemberApiImpl implements MemberApi {
     public RestResponse<MemberDto> getMemberByUserName(@RequestBody RestRequest<MemberDto> restRequest) {
        RestResponse<MemberDto> response = new RestResponse<>();
        MemberDto memberDto = restRequest.getBody();
-       Member member = memberRepository.getOne(1L);
+       Long id= 1L;
+       Member member = memberRepository.getMemberById(id);
        if(member != null && member.getAge()>0){
-           memberDto.setAge(member.getAge());
-           response.setBody(memberDto);
+           response.setBody(MemberConverter.INSTANCE.convertFrom(member));;
+           // 可使用枚举
+           response.setCode("200");
+           response.setMsg("请求成功");
        }
        return response;
     }

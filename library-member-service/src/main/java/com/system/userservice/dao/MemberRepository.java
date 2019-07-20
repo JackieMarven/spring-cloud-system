@@ -11,10 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MemberRepository extends JpaRepository<Member,Long> {
 
-    /**
-     * 根据姓名查找会员
-     * @param userName
-     * @return
-     */
-    Member findByUserName(String userName);
+    Member getMemberById(Long id);
+
 }
