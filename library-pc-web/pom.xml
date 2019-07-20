@@ -10,9 +10,9 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.system</groupId>
-  <artifactId>library</artifactId>
+  <artifactId>library-pc-web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>library</name>
+  <name>library-pc-web</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
@@ -39,6 +39,14 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.system</groupId>
+      <artifactId>library-member-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+
   </dependencies>
 
   <dependencyManagement>
