@@ -18,8 +18,17 @@ spring:
       username: LIBRARY_SYSTEM
       #配置密码
       password:
+      #url: jdbc:mysql://localhost:3306/library?serverTimezone=UTC
+      #配置用户名
+      #username: root
+      #配置密码
+      #password: root
       driver-class-name: com.mysql.jdbc.Driver
   jpa:
       show-sql: true
       hibernate:
         ddl-auto: update
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
