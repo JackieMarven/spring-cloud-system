@@ -13,11 +13,11 @@ spring:
     name: library-member-service
   datasource:
       #数据库相关的配置url  -SSL连接设置为false
-      url: jdbc:mysql://localhost:3306/library?serverTimezone=UTC
+      url: jdbc:mysql://39.97.119.0:3306/LIBRARY_SYSTEM?serverTimezone=UTC
       #配置用户名
-      username: root
+      username: LIBRARY_SYSTEM
       #配置密码
-      password: root
+      password:
       driver-class-name: com.mysql.jdbc.Driver
   jpa:
       show-sql: true
