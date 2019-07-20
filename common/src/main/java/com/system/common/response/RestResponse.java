@@ -14,22 +14,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class RestResponse<T> implements Serializable{
 
-    private String code;
+    private String code = "200";
 
-    private String msg;
+    private String msg = "请求成功";
 
     private T body = null;
 
-
-    public static <T> RestResponse<T> success(T body){
-        return new RestResponse<T>("200","success",body);
-    }
-
-    public static <T> RestResponse<T> fail(){
-        return new RestResponse<T>("201", "", null);
-    }
-
-    public static <T> RestResponse<T> fail(String msg, T body){
-        return new RestResponse<T>("201", msg, body);
-    }
 }
