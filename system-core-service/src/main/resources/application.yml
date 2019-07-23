@@ -1,0 +1,23 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: library-system-core-service
+  datasource:
+    url: jdbc:mysql://39.97.119.0:3306/LIBRARY_SYSTEM?autoReconnect=true&autoReconnectForPools=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: w2FBbeFALwYXeiYx
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+#    driver-class-name: com.mysq   l.jdbc.Driver
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka
