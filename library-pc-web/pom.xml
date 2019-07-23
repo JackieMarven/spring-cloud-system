@@ -35,6 +35,11 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
@@ -46,6 +51,17 @@
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.system.library</groupId>
+      <artifactId>Library-System-Entity</artifactId>
+      <version>1.0.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
   </dependencies>
 
